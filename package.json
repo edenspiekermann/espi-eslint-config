@@ -1,0 +1,34 @@
+{
+  "name": "@oyez/eslint-config-oyez",
+  "version": "1.0.0",
+  "description": "A shareable eslint config for oyez products",
+  "main": "index.js",
+  "engines": {
+    "node": ">=8.6.0",
+    "yarn": "1.3.2"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "peerDependencies": {
+    "eslint": ">= 4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lovelysystems/oyez-eslint-config.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "homepage": "https://github.com/lovelysystems/oyez-eslint-config",
+  "dependencies": {
+    "babel-eslint": "^8.2.2",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-jest": "^21.15.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
+    "prettier": "^1.11.1"
+  }
+}
