@@ -30,6 +30,9 @@ module.exports = {
         bracketSpacing: true,
       }
     ],
+    // we don't error when files from devDependencies are imported, since we need them in the .stories.js files,
+    // and we want these files to be linted, but not to be exported with the repository
+    'import/no-extraneous-dependencies': 'off',
     // This rule struggles with flow and class properties
     'react/sort-comp': 'off',
     // ignore linebreak style. the CRLF / LF endings wont matter
