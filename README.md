@@ -7,8 +7,9 @@ This repository contains the ESLINT configuration for linting JavaScript project
 There is a generic oyez-ro user that has been created. This user has an OAuth key and has been granted access to this repo. So you will need to acquire this key from the repo admin to install the package from an npm job.
 
 Then add the following to your project's `package.json`
+```bash
 git+https://<oyez-ro-oauth-key>:x-oauth-basic@github.com/lovelysystems/oyez-eslint-config.git#master
-
+```
 then run
 
 ```js
