@@ -1,6 +1,6 @@
 {
   "name": "@oyez/eslint-config-oyez",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "description": "A shareable eslint config for oyez products",
   "main": "index.js",
   "engines": {
