@@ -1,4 +1,4 @@
-Edenspiekermann ESLINT Configuration
+# Edenspiekermann ESLINT Configuration
 
 This repository contains the ESLINT configuration for linting JavaScript projects at ESPI.
 
