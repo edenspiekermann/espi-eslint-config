@@ -1,38 +1,6 @@
-# Champ - Oyez ESLINT Configuration
+Edenspiekermann ESLINT Configuration
 
-This repository contains the ESLINT configuration for linting JavaScript projects in the Oyez suite of products.
-
-## How to add this configuration to your project
-
-There is a generic oyez-ro user that has been created. This user has an OAuth key and has been granted access to this repo. So you will need to acquire this key from the repo admin to install the package from an npm job.
-
-Then add the following to your project's `package.json`
-```bash
-git+https://<oyez-ro-oauth-key>:x-oauth-basic@github.com/lovelysystems/oyez-eslint-config.git#master
-```
-then run
-
-```js
-$ npm install
-```
-
-Next you will need to add an ESLint config section to either your `package.json` as follows:
-
-```json
-{
-  "eslintConfig": {
-    "extends": "@oyez/eslint-config-oyez"
-  }
-}
-```
-
-Or to your `.eslintrc`:
-
-```json
-{
-  "extends": "@oyez/eslint-config-oyez"
-}
-```
+This repository contains the ESLINT configuration for linting JavaScript projects at ESPI.
 
 ## How to develop the repository
 
