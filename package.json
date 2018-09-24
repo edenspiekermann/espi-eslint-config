@@ -4,7 +4,7 @@
   "description": "A shareable eslint config for ESPI projects",
   "main": "index.js",
   "engines": {
-    "node": ">=8.6.0",
+    "node": ">=8.6.0"
   },
   "scripts": {
     "test": "test"
