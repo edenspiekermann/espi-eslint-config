@@ -16,9 +16,9 @@ Add some ESLint config to your `package.json`:
 ```json
 {
     "name": "my-javascript-project",
-  "eslintConfig": {
-      "extends": "edenspiekermann"
-  }
+    "eslintConfig": {
+        "extends": "edenspiekermann"
+    }
 }
 ```
 
@@ -32,9 +32,11 @@ Or to `.eslintrc`:
 
 Depending on how you automate your JS linting you may wish to add a lint task to the scripts block in your `package.json` If this is your preferred setup simply add the following task.
 
-```
-"scripts: {
-    "lint": "eslint --fix path/to/your/javascript/**/*.js
+```json
+{
+    "scripts": {
+        "lint": "eslint --fix path/to/your/javascript/**/*.js"
+    }
 }
 ```
  
