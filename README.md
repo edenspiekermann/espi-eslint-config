@@ -41,15 +41,15 @@ Depending on how you automate your JS linting you may wish to add a lint task to
 You can now use this task by running `npm run lint`. 
 # Contributing
 
-When contributing to this repository, please first check the Github issue to see if this has already been raised or assigned.
-
-Please note we have a code of conduct, please follow it in all your interactions with the project.
+When contributing to this repository, please first check the Github issue to see if this has already been raised or assigned. If not feel free to create an issue.
 
 ## Pull Request Process
 
-1. Please give as much information in the Pull Requests description about the proposed changes listing what files are changed.
+If you wish to submit a pull request please follow these simple steps:
+
+1. Please add some information in the Pull Request description about the proposed changes listing what files are changed and a few lines about why.
 3. Increase the version number in the package.json following the [SemVer][semver] versioning scheme 
-4. Following approval from the ESPI development team we will merge the PR, create a release and publish to NPM
+4. Following testing and approval from the ESPI development team we will merge the PR, create a release and publish it to NPM
 
 
 ## Helpful Links
