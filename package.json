@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-edenspiekermann",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A shareable eslint config for ESPI projects",
   "main": "index.js",
   "engines": {
