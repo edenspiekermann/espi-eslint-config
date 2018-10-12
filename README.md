@@ -2,7 +2,7 @@
 
 This repository contains the ESLINT configuration for linting [React][react] projects at [EdenSpiekermann.][espi-url]
 
-## Install
+## Installation
 
 ```
 $ npm install --save-dev eslint-config-edenspiekermann
@@ -39,11 +39,11 @@ Depending on how you automate your JS linting you may wish to add a lint task to
 ```
  
 You can now use this task by running `npm run lint`. 
-# Contributing
+## Contributing
 
 When contributing to this repository, please first check the Github issue to see if this has already been raised or assigned. If not feel free to create an issue.
 
-## Pull Request Process
+### Pull Request Process
 
 If you wish to submit a pull request please follow these simple steps:
 
