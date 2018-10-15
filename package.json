@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-edenspiekermann",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A shareable eslint config for ESPI projects",
   "main": "index.js",
   "engines": {
@@ -12,7 +12,13 @@
   "peerDependencies": {
     "eslint": ">= 4"
   },
-  "keywords": ["eslint", "eslint config", "prettier", "linting", "react"],
+  "keywords": [
+    "eslint",
+    "eslint config",
+    "prettier",
+    "linting",
+    "react"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/edenspiekermann/espi-eslint-config.git"

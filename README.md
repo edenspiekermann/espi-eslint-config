@@ -41,6 +41,12 @@ Depending on how you automate your JS linting you may wish to add a lint task to
 ```
  
 You can now use this task by running `npm run lint`. 
+
+## Integrating with Prettier
+The config here is actually simply a proxy for Airbnb, prettier and prettier react configurations with a few custom overrides built in. One way you can have this code formatted on save though is through an Eslint integration in your code editor. We use the ESLint plugin for VSCode and this is configured to run on save. The code is then formatted and any errors highlighted in the editor window.
+
+In VSCode you can select `View > Extensions` or `shift + cmd + x` to view the enabled extensions. By selecting ESLint in the list of extensions you can see the options that must be configured to enable format on save. You can then select `Code > preferences > settings` or `cmd + ,` to adjust the ESLint configuration settings to format your code on save.
+
 ## Contributing
 
 When contributing to this repository, please first check the Github issue to see if this has already been raised or assigned. If not feel free to create an issue.
