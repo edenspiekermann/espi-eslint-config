@@ -22,7 +22,7 @@ Add some ESLint config to your `package.json`:
 }
 ```
 
-Or to `.eslintrc`:
+Or to `.eslintrc.json`:
 
 ```json
 {
@@ -43,9 +43,19 @@ Depending on how you automate your JS linting you may wish to add a lint task to
 You can now use this task by running `npm run lint`. 
 
 ## Integrating with Prettier
-The config here is actually simply a proxy for Airbnb, prettier and prettier react configurations with a few custom overrides built in. One way you can have this code formatted on save though is through an Eslint integration in your code editor. We use the ESLint plugin for VSCode and this is configured to run on save. The code is then formatted and any errors highlighted in the editor window.
+The config here is actually simply a proxy for Airbnb, prettier and prettier react configurations with a few custom overrides built in. One way you can have this code formatted on save though is through an ESLint integration in your code editor. We use the ESLint plugin for VSCode and this is configured to run on save. The code is then formatted and any errors highlighted in the editor window.
 
-In VSCode you can select `View > Extensions` or `shift + cmd + x` to view the enabled extensions. By selecting ESLint in the list of extensions you can see the options that must be configured to enable format on save. You can then select `Code > preferences > settings` or `cmd + ,` to adjust the ESLint configuration settings to format your code on save.
+### Installing the ESLint extension in VSCode
+
+* In VSCode you can select `View > Extensions` or `shift + cmd + x` to view the extensions sidebar and search the marketplace for the extension. Install and restart VSCode.
+
+* Next, select ESLint in the list of extensions and you will see the options that must be configured to enable format on save.
+
+* select `Code > preferences > settings` or `cmd + ,` to adjust the ESLint configuration settings listed in the extension's README to format your code on save.
+
+For other editors the instructions are basically the same, install the linting tool, sublime-linter for sublime or linter-eslint for Atom for example, and configure your settings to run and format on save.
+
+
 
 ## Contributing
 
