@@ -7,7 +7,7 @@
     "node": ">=8.6.0"
   },
   "scripts": {
-    "test": "test"
+    "lint": "eslint . --ext .js"
   },
   "keywords": [
     "eslint",
@@ -23,6 +23,17 @@
   "author": "EdenSpiekermann",
   "license": "MIT",
   "homepage": "https://github.com/edenspiekermann/espi-eslint-config",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
   "peerDependencies": {
     "eslint": ">=6"
   },
@@ -38,5 +49,10 @@
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.2.0",
     "prettier": "^1.18.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2"
   }
 }
