@@ -7,10 +7,8 @@
     "node": ">=8.6.0"
   },
   "scripts": {
-    "test": "test"
-  },
-  "peerDependencies": {
-    "eslint": ">= 4"
+    "test": "echo \"test\"",
+    "release": "np"
   },
   "keywords": [
     "eslint",
@@ -26,6 +24,12 @@
   "author": "EdenSpiekermann",
   "license": "MIT",
   "homepage": "https://github.com/edenspiekermann/espi-eslint-config",
+  "np": {
+    "tests": "npm run test"
+  },
+  "peerDependencies": {
+    "eslint": ">= 4"
+  },
   "dependencies": {
     "babel-eslint": "^8.2.2",
     "eslint-config-airbnb": "^16.1.0",
@@ -36,5 +40,8 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.7.0",
     "prettier": "^1.11.1"
+  },
+  "devDependencies": {
+    "np": "^5.1.1"
   }
 }
