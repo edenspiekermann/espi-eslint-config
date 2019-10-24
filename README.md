@@ -86,6 +86,10 @@ Enable `"edenspiekermann/rules/jest"` when using [jest][jest] in your project. I
 }
 ```
 
+### Typescript
+
+To add typescript support for eslint extend the configuration with `"edenspiekermann/rules/typescript"`. This enabled typescript validation for `*.ts` files. When using typescript with react, you can also add `"edenspiekermann/rules/typescript-react"` which adds jsx support for `*.tsx` files.
+
 ## Integrating with Prettier
 The config here is actually simply a proxy for Airbnb, prettier and prettier react configurations with a few custom overrides built in. One way you can have this code formatted on save though is through an ESLint integration in your code editor. We use the ESLint plugin for VSCode and this is configured to run on save. The code is then formatted and any errors highlighted in the editor window.
 
