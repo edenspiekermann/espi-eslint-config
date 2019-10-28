@@ -16,16 +16,24 @@ module.exports = {
       plugins: [
         '@typescript-eslint',
       ],
-      settings: {
-        react: {
-          pragma: 'React',
-          version: 'detect',
-        },
-      },
       rules: {
         'react/jsx-filename-extension': ['error', {
           extensions: ['.tsx'],
         }],
+      },
+      settings: {
+        'import/parsers': {
+          '@typescript-eslint/parser': ['.tsx'],
+        },
+        'import/resolver': {
+          typescript: {
+            alwaysTryTypes: true,
+          },
+        },
+        react: {
+          pragma: 'React',
+          version: 'detect',
+        },
       },
     },
   ],

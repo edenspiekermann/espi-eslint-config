@@ -13,6 +13,16 @@ module.exports = {
       plugins: [
         '@typescript-eslint',
       ],
+      settings: {
+        'import/parsers': {
+          '@typescript-eslint/parser': ['.ts'],
+        },
+        'import/resolver': {
+          typescript: {
+            alwaysTryTypes: true,
+          },
+        },
+      },
     },
   ],
 };
