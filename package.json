@@ -38,6 +38,9 @@
   "np": {
     "tests": "npm run lint"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "eslint": ">=6"
   },
