@@ -5,7 +5,7 @@ This repository contains the ESLINT configuration for projects at [EdenSpiekerma
 ## Installation
 
 ```
-$ npm i -D eslint-config-edenspiekermann
+$ npm i -D @edenspiekermann/eslint-config
 ```
 
 
