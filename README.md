@@ -17,7 +17,7 @@ Add some ESLint config to your `package.json`:
 {
     "name": "my-javascript-project",
     "eslintConfig": {
-        "extends": ["edenspiekermann"]
+        "extends": ["@edenspiekermann/eslint-config"]
     }
 }
 ```
@@ -26,7 +26,7 @@ Or to `.eslintrc.json`:
 
 ```json
 {
-    "extends": ["edenspiekermann"]
+    "extends": ["@edenspiekermann/eslint-config"]
 }
 ```
 
@@ -44,7 +44,7 @@ You can now use this task by running `npm run lint`.
 
 ### Core rules
 
-Using `"extends": ["edenspiekermann"]` is a short hand for `"extends": ["edenspiekermann/rules/core"]`. The core rules use extend the [airbnb-base][airbnb-base-config] configuration. It contains all rulesets for a _frameworkless_ / _vanilla js_ validation. On top of that its possible to extend these rules with some more specific configurations (see the following).
+Using `"extends": ["@edenspiekermann/eslint-config"]` is a short hand for `"extends": ["@edenspiekermann/eslint-config/rules/core"]`. The core rules use extend the [airbnb-base][airbnb-base-config] configuration. It contains all rulesets for a _frameworkless_ / _vanilla js_ validation. On top of that its possible to extend these rules with some more specific configurations (see the following).
 
 ### Prettier rules
 
@@ -53,42 +53,42 @@ Add this configuration if you want to use eslint with [prettier][prettier]. For 
 ```
 {
   "extends": [
-    "edenspiekermann",
-    "edenspiekermann/rules/prettier"
+    "@edenspiekermann/eslint-config",
+    "@edenspiekermann/eslint-config/rules/prettier"
   ]
 }
 ```
 
 ### React
 
-Use `"edenspiekermann/rules/react"` and `"edenspiekermann/rules/react-proptypes"` configurations if you want to use eslint with [react][react]. `"edenspiekermann/rules/react"` is mostly a proxy configuration for [airbnb][airbnb-config] configuration. It disables the proptype validation. If you want to re-enable them, you should also add the `"edenspiekermann/rules/react-proptypes"` rules.
+Use `"@edenspiekermann/eslint-config/rules/react"` and `"@edenspiekermann/eslint-config/rules/react-proptypes"` configurations if you want to use eslint with [react][react]. `"@edenspiekermann/eslint-config/rules/react"` is mostly a proxy configuration for [airbnb][airbnb-config] configuration. It disables the proptype validation. If you want to re-enable them, you should also add the `"@edenspiekermann/eslint-config/rules/react-proptypes"` rules.
 
 ```
 {
   "extends": [
-    "edenspiekermann",
-    "edenspiekermann/rules/react",
-    "edenspiekermann/rules/react-proptypes",
+    "@edenspiekermann/eslint-config",
+    "@edenspiekermann/eslint-config/rules/react",
+    "@edenspiekermann/eslint-config/rules/react-proptypes",
   ]
 }
 ```
 
 ### Jest
 
-Enable `"edenspiekermann/rules/jest"` when using [jest][jest] in your project. It uses the `jest/recommended` and `jest/style` rules.
+Enable `"@edenspiekermann/eslint-config/rules/jest"` when using [jest][jest] in your project. It uses the `jest/recommended` and `jest/style` rules.
 
 ```
 {
   "extends": [
-    "edenspiekermann",
-    "edenspiekermann/rules/jest"
+    "@edenspiekermann/eslint-config",
+    "@edenspiekermann/eslint-config/rules/jest"
   ]
 }
 ```
 
 ### Typescript
 
-To add typescript support for eslint extend the configuration with `"edenspiekermann/rules/typescript"`. This enabled typescript validation for `*.ts` files. When using typescript with react, you can also add `"edenspiekermann/rules/typescript-react"` which adds jsx support for `*.tsx` files.
+To add typescript support for eslint extend the configuration with `"@edenspiekermann/eslint-config/rules/typescript"`. This enabled typescript validation for `*.ts` files. When using typescript with react, you can also add `"@edenspiekermann/eslint-config/rules/typescript-react"` which adds jsx support for `*.tsx` files.
 
 ## Integrating with Prettier
 The config here is actually simply a proxy for Airbnb, prettier and prettier react configurations with a few custom overrides built in. One way you can have this code formatted on save though is through an ESLint integration in your code editor. We use the ESLint plugin for VSCode and this is configured to run on save. The code is then formatted and any errors highlighted in the editor window.
