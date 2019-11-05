@@ -17,7 +17,7 @@ Add some ESLint config to your `package.json`:
 {
     "name": "my-javascript-project",
     "eslintConfig": {
-        "extends": "edenspiekermann"
+        "extends": "@edenspiekermann/eslint-config"
     }
 }
 ```
@@ -26,7 +26,7 @@ Or to `.eslintrc.json`:
 
 ```json
 {
-    "extends": "edenspiekermann"
+    "extends": "@edenspiekermann/eslint-config"
 }
 ```
 
