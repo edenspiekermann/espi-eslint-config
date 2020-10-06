@@ -2,6 +2,9 @@ module.exports = {
   extends: [
     'airbnb',
   ],
+  plugins: [
+    'react-hooks',
+  ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -24,5 +27,9 @@ module.exports = {
 
     // this rule struggles with flow and class properties
     'react/sort-comp': 'off',
+
+    // use react hooks rules
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
   },
 };
