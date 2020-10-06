@@ -87,4 +87,37 @@ describe('core rules', () => {
       );
     });
   });
+
+  describe('quote-props', () => {
+    it('should warn', async () => {
+      const filePath = join(__dirname, '__fixtures__', 'core', 'quote-props.js');
+      const [{ messages, ...rest }] = await linter.lintFiles([filePath]);
+
+      expect(messages).toEqual([
+        expect.objectContaining({
+          line: 8,
+          messageId: 'redundantQuoting',
+          ruleId: 'quote-props',
+        }),
+        expect.objectContaining({
+          line: 12,
+          messageId: 'inconsistentlyQuotedProperty',
+          ruleId: 'quote-props',
+        }),
+        expect.objectContaining({
+          line: 16,
+          messageId: 'redundantQuoting',
+          ruleId: 'quote-props',
+        }),
+      ]);
+      expect(rest).toEqual(
+        expect.objectContaining({
+          errorCount: 3,
+          warningCount: 0,
+          fixableErrorCount: 3,
+          fixableWarningCount: 0,
+        }),
+      );
+    });
+  });
 });
