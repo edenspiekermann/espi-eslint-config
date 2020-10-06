@@ -30,7 +30,7 @@ module.exports = {
             alwaysTryTypes: true,
           },
         },
-        react: {
+        'react': {
           pragma: 'React',
           version: 'detect',
         },
