@@ -23,6 +23,11 @@ module.exports = {
           },
         },
       },
+      rules: {
+        // Enforce optional chaining if possible:
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-optional-chain.md
+        '@typescript-eslint/prefer-optional-chain': ['error'],
+      },
     },
   ],
 };
