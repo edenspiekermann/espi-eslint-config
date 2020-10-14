@@ -18,6 +18,10 @@ module.exports = {
     // but not to be exported with the repository
     'import/no-extraneous-dependencies': 'off',
 
+    // never enforce default export over named exports.
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
+    'import/prefer-default-export': ['off'],
+
     // if this rule breaks with windows users, add a `.gitattributes` to your
     // project root to disable automatic git conversion for text files (example
     // file in this repo)
