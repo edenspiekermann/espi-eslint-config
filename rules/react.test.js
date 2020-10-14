@@ -1,5 +1,6 @@
-const { ESLint } = require('eslint');
 const { join } = require('path');
+
+const { ESLint } = require('eslint');
 
 describe('react rules', () => {
   let linter = null;

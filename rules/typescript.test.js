@@ -1,5 +1,6 @@
-const { ESLint } = require('eslint');
 const { join } = require('path');
+
+const { ESLint } = require('eslint');
 
 describe('typescript rules', () => {
   let linter = null;
