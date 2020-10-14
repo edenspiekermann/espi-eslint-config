@@ -35,6 +35,23 @@ describe('core rules', () => {
     });
   });
 
+  describe('import/prefer-default-export', () => {
+    it('should not error', async () => {
+      const filePath = join(__dirname, '__fixtures__', 'core', 'import', 'prefer-default-export.js');
+      const [{ messages, ...rest }] = await linter.lintFiles([filePath]);
+
+      expect(messages).toEqual([]);
+      expect(rest).toEqual(
+        expect.objectContaining({
+          errorCount: 0,
+          warningCount: 0,
+          fixableErrorCount: 0,
+          fixableWarningCount: 0,
+        }),
+      );
+    });
+  });
+
   describe('linebreak-style', () => {
     it('should not error for unix linebreaks', async () => {
       const filePath = join(__dirname, '__fixtures__', 'core', 'linebreak-style.cr.js');
