@@ -22,5 +22,8 @@ module.exports = {
     // project root to disable automatic git conversion for text files (example
     // file in this repo)
     'linebreak-style': ['error', 'unix'],
+
+    // enforce a unique quote style for object properties in a consistent way.
+    'quote-props': ['error', 'consistent-as-needed'],
   },
 };
