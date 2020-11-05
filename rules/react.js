@@ -1,9 +1,8 @@
 module.exports = {
   extends: [
-    'airbnb',
-  ],
-  plugins: [
-    'react-hooks',
+    'airbnb/rules/react',
+    'airbnb/rules/react-hooks',
+    'airbnb/rules/react-a11y',
   ],
   parserOptions: {
     ecmaFeatures: {
