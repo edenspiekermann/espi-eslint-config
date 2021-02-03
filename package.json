@@ -62,13 +62,13 @@
     "prettier": "^2.1.2"
   },
   "devDependencies": {
-    "@types/react": "^16.9.52",
+    "@types/react": "^17.0.1",
     "eslint": "^7.10.0",
     "husky": "^4.3.0",
     "jest": "^26.4.2",
     "lint-staged": "^10.4.0",
     "np": "^6.5.0",
-    "react": "^16.13.1",
+    "react": "^17.0.1",
     "typescript": "^4.0.3"
   }
 }
