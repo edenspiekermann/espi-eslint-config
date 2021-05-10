@@ -5,3 +5,5 @@ node_modules/
 .gitattributes
 .gitignore
 .nvmrc
+rules/__fixtures__/**/*
+**/*.test.*
