@@ -1,6 +1,20 @@
 const TypeScriptConfig = require('./typescript');
 
 module.exports = {
+  rules: {
+    // Ensure consistent use of file extension within the import path
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
+    'import/extensions': [
+      TypeScriptConfig.rules['import/extensions'][0],
+      TypeScriptConfig.rules['import/extensions'][1],
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
+  },
   overrides: [
     {
       ...TypeScriptConfig.overrides[0],
