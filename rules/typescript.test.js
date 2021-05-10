@@ -20,6 +20,67 @@ describe('typescript rules', () => {
     linter = null;
   });
 
+  describe('no-unused-vars', () => {
+    it('should error', async () => {
+      const filePath = join(__dirname, '__fixtures__', 'typescript', 'no-unused-vars.ts');
+      const [{ messages, ...rest }] = await linter.lintFiles([filePath]);
+
+      expect(messages).toEqual([
+        expect.objectContaining({
+          line: 2,
+          messageId: 'unusedVar',
+          ruleId: '@typescript-eslint/no-unused-vars',
+        }),
+        expect.objectContaining({
+          line: 3,
+          messageId: 'unusedVar',
+          ruleId: '@typescript-eslint/no-unused-vars',
+        }),
+        expect.any(Object),
+        expect.any(Object),
+        expect.objectContaining({
+          line: 4,
+          messageId: 'unusedVar',
+          ruleId: '@typescript-eslint/no-unused-vars',
+        }),
+      ]);
+
+      expect(rest).toEqual(
+        expect.objectContaining({
+          errorCount: 5,
+          warningCount: 0,
+          fixableErrorCount: 2,
+          fixableWarningCount: 0,
+        }),
+      );
+    });
+  });
+
+  describe('no-use-before-define', () => {
+    it('should error', async () => {
+      const filePath = join(__dirname, '__fixtures__', 'typescript', 'no-use-before-define.ts');
+      const [{ messages, ...rest }] = await linter.lintFiles([filePath]);
+
+      expect(messages).toEqual([
+        expect.objectContaining({
+          line: 1,
+          messageId: 'noUseBeforeDefine',
+          ruleId: '@typescript-eslint/no-use-before-define',
+        }),
+        expect.any(Object),
+      ]);
+
+      expect(rest).toEqual(
+        expect.objectContaining({
+          errorCount: 2,
+          warningCount: 0,
+          fixableErrorCount: 0,
+          fixableWarningCount: 0,
+        }),
+      );
+    });
+  });
+
   describe('prefer-optional-chain', () => {
     it('should error', async () => {
       const filePath = join(__dirname, '__fixtures__', 'typescript', 'prefer-optional-chain.ts');

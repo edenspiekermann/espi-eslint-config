@@ -24,6 +24,18 @@ module.exports = {
         },
       },
       rules: {
+        // Enforce no unused vars: This rule extends the base "eslint/no-unused-vars"
+        // rule. It adds support for TypeScript features, such as types.
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-vars.md
+        '@typescript-eslint/no-unused-vars': 'error',
+        'no-unused-vars': 'off',
+
+        // Enforce no unused vars: This rule extends the base "eslint/no-use-before-define"
+        // rule. It adds support for type, interface and enum declarations.
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-use-before-define.md
+        '@typescript-eslint/no-use-before-define': 'error',
+        'no-use-before-define': 'off',
+
         // Enforce optional chaining if possible:
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-optional-chain.md
         '@typescript-eslint/prefer-optional-chain': ['error'],
