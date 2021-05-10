@@ -3,20 +3,18 @@ const TypeScriptConfig = require('./typescript');
 module.exports = {
   overrides: [
     {
+      ...TypeScriptConfig.overrides[0],
+
       files: ['*.tsx'],
-      extends: [
-        'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/recommended-requiring-type-checking',
-      ],
-      parser: '@typescript-eslint/parser',
       parserOptions: {
-        project: './tsconfig.json',
+        ...TypeScriptConfig.overrides[0].parserOptions,
+
         ecmaFeatures: {
           jsx: true,
         },
       },
       plugins: [
-        '@typescript-eslint',
+        ...TypeScriptConfig.overrides[0].plugins,
       ],
       rules: {
         ...TypeScriptConfig.overrides[0].rules,
@@ -28,15 +26,9 @@ module.exports = {
         }],
       },
       settings: {
-        'import/parsers': {
-          '@typescript-eslint/parser': ['.tsx'],
-        },
-        'import/resolver': {
-          typescript: {
-            alwaysTryTypes: true,
-          },
-        },
-        'react': {
+        ...TypeScriptConfig.overrides[0].settings,
+
+        react: {
           pragma: 'React',
           version: 'detect',
         },
