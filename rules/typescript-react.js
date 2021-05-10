@@ -1,3 +1,5 @@
+const TypeScriptConfig = require('./typescript');
+
 module.exports = {
   overrides: [
     {
@@ -17,6 +19,10 @@ module.exports = {
         '@typescript-eslint',
       ],
       rules: {
+        ...TypeScriptConfig.overrides[0].rules,
+
+        // Restrict file extensions that may contain JSX
+        // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
         'react/jsx-filename-extension': ['error', {
           extensions: ['.tsx'],
         }],
