@@ -1,6 +1,6 @@
 {
   "name": "@edenspiekermann/eslint-config",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "A shareable eslint config for ESPI projects",
   "main": "index.js",
   "engines": {
