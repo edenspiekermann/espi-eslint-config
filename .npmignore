@@ -1,9 +1,11 @@
 .git/
 node_modules/
+.babelrc.json
 .editorconfig
 .eslintrc.js
 .gitattributes
 .gitignore
 .nvmrc
+jest.config.json
 rules/__fixtures__/**/*
 **/*.test.*
