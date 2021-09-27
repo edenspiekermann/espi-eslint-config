@@ -7,6 +7,7 @@
     "node": ">=10"
   },
   "scripts": {
+    "prepare": "husky install",
     "lint": "eslint . --ext .js",
     "test": "jest --verbose",
     "release": "np"
@@ -25,17 +26,6 @@
   "author": "EdenSpiekermann",
   "license": "MIT",
   "homepage": "https://github.com/edenspiekermann/espi-eslint-config",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run test"
-    }
-  },
-  "lint-staged": {
-    "*.js,!__fixtures/**/*.js": [
-      "eslint --fix"
-    ]
-  },
   "np": {
     "tests": "npm run lint"
   },
