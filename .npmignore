@@ -1,10 +1,12 @@
 .git/
+.husky/
 node_modules/
 .babelrc.json
 .editorconfig
 .eslintrc.js
 .gitattributes
 .gitignore
+.lintstagedrc
 .nvmrc
 jest.config.json
 rules/__fixtures__/**/*
