@@ -32,6 +32,14 @@ module.exports = {
         },
       },
       rules: {
+        // Enforce no variable declarations from shadowing variables declared in
+        // the outer scope: This rule extends the base eslint/no-shadow rule. It
+        // adds support for TypeScript's this parameters and global augmentation,
+        // and adds options for TypeScript features.
+        // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-shadow.md
+        '@typescript-eslint/no-shadow': 'error',
+        'no-shadow': 'off',
+
         // Enforce no unused vars: This rule extends the base "eslint/no-unused-vars"
         // rule. It adds support for TypeScript features, such as types.
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-vars.md

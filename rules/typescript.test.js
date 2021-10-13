@@ -20,6 +20,30 @@ describe('typescript rules', () => {
     linter = null;
   });
 
+  describe('no-shadow', () => {
+    it('should error', async () => {
+      const filePath = join(__dirname, '__fixtures__', 'typescript', 'no-shadow.ts');
+      const [{ messages, ...rest }] = await linter.lintFiles([filePath]);
+
+      expect(messages).toEqual([
+        expect.objectContaining({
+          line: 10,
+          messageId: 'noShadow',
+          ruleId: '@typescript-eslint/no-shadow',
+        }),
+      ]);
+
+      expect(rest).toEqual(
+        expect.objectContaining({
+          errorCount: 1,
+          warningCount: 0,
+          fixableErrorCount: 0,
+          fixableWarningCount: 0,
+        }),
+      );
+    });
+  });
+
   describe('no-unused-vars', () => {
     it('should error', async () => {
       const filePath = join(__dirname, '__fixtures__', 'typescript', 'no-unused-vars.ts');
@@ -67,12 +91,11 @@ describe('typescript rules', () => {
           messageId: 'noUseBeforeDefine',
           ruleId: '@typescript-eslint/no-use-before-define',
         }),
-        expect.any(Object),
       ]);
 
       expect(rest).toEqual(
         expect.objectContaining({
-          errorCount: 2,
+          errorCount: 1,
           warningCount: 0,
           fixableErrorCount: 0,
           fixableWarningCount: 0,
