@@ -15,7 +15,7 @@ module.exports = {
     // we don't error when files from devDependencies are imported, since we
     // need them in the .stories.js files, and we want these files to be linted,
     // but not to be exported with the repository
-    'import/no-extraneous-dependencies': 'off',
+    'import/no-extraneous-dependencies': ['off'],
 
     // enforce a convention in the order of require() / import statements.
     'import/order': ['error', {
